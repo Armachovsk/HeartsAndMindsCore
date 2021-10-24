@@ -1,4 +1,4 @@
-[] call compile preprocessFileLineNumbers "core\doc.sqf";
+[] call compile preprocessFileLineNumbers "HeartsAndMindsCore\core\doc.sqf";
 
 [{!isNull player}, {
 
