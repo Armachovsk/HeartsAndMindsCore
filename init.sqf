@@ -1,4 +1,11 @@
+params [
+    ["_beforeInit", {}, [{}]],
+    ["_afterInit", {}, [{}]]
+];
+
 enableSaving [false, false];
+
+[] call _beforeInit;
 
 if (hasInterface) then {btc_intro_done = [] spawn BTC_fnc_intro;};
 
@@ -15,3 +22,5 @@ if (!isDedicated && hasInterface) then {
 if (!isDedicated && !hasInterface) then {
     [] call compile preprocessFileLineNumbers "HeartsAndMindsCore\core\init_headless.sqf";
 };
+
+[] call _afterInit;
